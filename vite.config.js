@@ -9,7 +9,7 @@ export default defineConfig({
       '@': join(process.cwd(), 'src'),
     }
   },
-  base: process.env.NODE_ENV === 'production' ? '/resume/' : '/', // Update '/resume/' to match your GitHub repo name
+  base: process.env.VITE_BASE_PATH || (process.env.NODE_ENV === 'production' ? '/resume/' : '/'),
   build: {
     outDir: 'dist',
     rollupOptions: {
