@@ -31,8 +31,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      - name: Set base path from repository name
+        id: base-path
+        run: |
+          REPO_NAME=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          echo "base_path=/$REPO_NAME/" >> $GITHUB_OUTPUT
+          echo "Repository name: $REPO_NAME"
+          echo "Base path will be: /$REPO_NAME/"
+      
       - name: Build
         run: NODE_ENV=production npm run build
+        env:
+          VITE_BASE_PATH: ${{ steps.base-path.outputs.base_path }}
+      
+      - name: Debug - Check built HTML
+        run: |
+          echo "=== Built HTML asset paths ==="
+          grep -E '(src=|href=)' dist/index.html | grep assets || echo "No asset paths found"
+          echo "=== NODE_ENV ==="
+          echo $NODE_ENV
+          echo "=== Repository name ==="
+          echo ${{ github.repository }}
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
