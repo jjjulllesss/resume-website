@@ -25,7 +25,7 @@ const resumeData = {
     ],
     
     // Bio
-    bio: "Cloud Solutions Architect combining business skills with solid technical knowledge in multi-cloud infrastructure (AWS, GCP, Oracle Cloud) and scalable AI systems for enterprises. Experienced in international roles in Paris, France, and Denver, USA, contributing to multi-million-dollar deployments, FinOps cost savings, and practical work with Kubernetes, Terraform IaC, Generative AI, MCP servers, AI agents, and RAG optimization.",
+    bio: "Cloud Solutions Architect combining business skills with solid technical knowledge in multi-cloud infrastructure (AWS, GCP, Oracle Cloud) and scalable AI systems for enterprises. Experienced in international roles in Paris (France) and Denver (USA) contributing to multi-million-dollar projects, FinOps cost savings, and practical work with Kubernetes, Terraform (IaC), Generative AI, MCP servers, AI agents, and RAG optimization.",
     
     // Career History
     // Each company can have multiple positions
@@ -37,18 +37,18 @@ const resumeData = {
                 {
                     "position": "Global Cloud Solutions Architect",
                     "period": "2023 - Present",
-                    "description": "Lead cloud architecture and AI initiatives for key customers across AWS, GCP, and Oracle Cloud. Developed reference architectures, managed technical partnerships, and created Gemini-based subtitling MVP on Vertex AI. Delivered 30% annual cost savings through FinOps governance and forecasting; GCP Partner of the Year 2024."
-                },
-                {
+                    "description": "Lead cloud architecture and AI initiatives for strategic customers across AWS, GCP, and Oracle Cloud. Designed reference architectures, strengthened technical partnerships, and built a subtitling workflow using Gemini models on Vertex AI. Drove 30% annual cost savings through FinOps governance and forecasting. Recognized as GCP Partner of the Year 2024."
+                  },
+                  {
                     "position": "EMEA Cloud Engineer",
                     "period": "2021 - 2023",
-                    "description": "Supported EMEA presales through full sales lifecycle: discovery, solution design, sizing, POC demos, and reference architecture contributions enabling first EMEA public cloud projects."
-                },
-                {
-                    "position": "LAB Administrator",
+                    "description": "Supported the EMEA presales organization across the full sales lifecycle/discovery, solution design, sizing, POC demos, and reference architecture creation, enabling the company’s first public cloud projects in the region."
+                  },
+                  {
+                    "position": "Lab Administrator",
                     "period": "2018 - 2021",
-                    "description": "Apprenticeship managing lab infrastructure for international pre/post-sales teams. Developed end-of-study AWS transcoding calculator and automation scripts, supporting company revenue growth from 50M to 80M over three years."
-                }
+                    "description": "Apprenticeship managing lab infrastructure for international pre- and post-sales teams. Built an AWS transcoding calculator and automation scripts as an end-of-study project."
+                  }
             ]
         },
         {
@@ -101,7 +101,7 @@ const resumeData = {
         {
             type: "certification",
             title: "Hugging Face - Model Context Protocol Course",
-            details: "MCP concepts, SDK usage in Python/TypeScript, end-to-end applications, and deployment with partners like Anthropic for context-aware AI integrating external tools and data.",
+            details: "MCP concepts, SDK usage in Python, end-to-end applications, and deployment with partners like Anthropic for context-aware AI integrating external tools and data.",
             date: "2025-12-22",
             link: null
         },

@@ -321,10 +321,10 @@ function App() {
         {/* Experience & Education Section */}
         <Card className="mb-8">
           <CardHeader>
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <CardTitle>Experience & Education</CardTitle>
               {/* Tab Buttons */}
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <Button
                   variant={experienceTab === 'experience' ? 'default' : 'outline'}
                   size="sm"
@@ -517,20 +517,26 @@ function App() {
 
                 {/* Pagination Controls */}
                 {totalPages > 1 && (
-                  <div className="flex items-center justify-between mt-6 pt-4 border-t">
-                    <div className="text-sm text-muted-foreground">
-                      Showing {activityPage * activitiesPerPage + 1} - {Math.min((activityPage + 1) * activitiesPerPage, filteredActivities.length)} of {filteredActivities.length} activities
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6 pt-4 border-t">
+                    <div className="text-sm text-muted-foreground text-center sm:text-left">
+                      <span className="hidden sm:inline">
+                        Showing {activityPage * activitiesPerPage + 1} - {Math.min((activityPage + 1) * activitiesPerPage, filteredActivities.length)} of {filteredActivities.length} activities
+                      </span>
+                      <span className="sm:hidden">
+                        {activityPage * activitiesPerPage + 1}-{Math.min((activityPage + 1) * activitiesPerPage, filteredActivities.length)} of {filteredActivities.length}
+                      </span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-center gap-2">
                       <Button
                         variant="outline"
                         size="sm"
                         onClick={() => setActivityPage(prev => Math.max(0, prev - 1))}
                         disabled={activityPage === 0}
                         aria-label="Previous page"
+                        className="flex sm:inline-flex"
                       >
-                        <ChevronLeft className="h-4 w-4 mr-1" />
-                        Previous
+                        <ChevronLeft className="h-4 w-4 sm:mr-1" />
+                        <span className="hidden sm:inline">Previous</span>
                       </Button>
                       <div className="text-sm text-muted-foreground px-2" aria-label={`Page ${activityPage + 1} of ${totalPages}`}>
                         Page {activityPage + 1} of {totalPages}
@@ -541,9 +547,10 @@ function App() {
                         onClick={() => setActivityPage(prev => Math.min(totalPages - 1, prev + 1))}
                         disabled={activityPage >= totalPages - 1}
                         aria-label="Next page"
+                        className="flex sm:inline-flex"
                       >
-                        Next
-                        <ChevronRight className="h-4 w-4 ml-1" />
+                        <span className="hidden sm:inline">Next</span>
+                        <ChevronRight className="h-4 w-4 sm:ml-1" />
                       </Button>
                     </div>
                   </div>
