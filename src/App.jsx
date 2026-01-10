@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import { Button } from './components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card.jsx'
 import { Badge } from './components/ui/badge.jsx'
-import { Download, Copy, Check, ExternalLink, Moon, Sun, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Download, Copy, Check, ExternalLink, Moon, Sun, ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
 import { resumeData } from '../data.js'
 
 function App() {
@@ -266,8 +266,12 @@ function App() {
                 <h1 className="text-3xl md:text-4xl font-semibold mb-2 tracking-tight">
                   {resumeData?.name || ''}
                 </h1>
-                <p className="text-muted-foreground mb-4 text-base">
+                <p className="text-muted-foreground mb-2 text-base">
                   {resumeData?.role || ''}
+                </p>
+                <p className="text-muted-foreground mb-4 text-sm flex items-center gap-2">
+                  <MapPin className="h-4 w-4" />
+                  Denver (USA) - Paris (France)
                 </p>
                 <div className="flex flex-wrap gap-3 items-center">
                   {resumeData.socialLinks && Array.isArray(resumeData.socialLinks) && resumeData.socialLinks.map((link, index) => (
@@ -278,7 +282,7 @@ function App() {
                       rel="noopener noreferrer"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
                     >
-                      {link?.icon && <i className={link.icon}></i>}
+                      {link?.icon && <i className={link.icon} style={{ fontSize: '1rem', lineHeight: '1' }}></i>}
                       <span>{link?.platform || ''}</span>
                     </a>
                   ))}
