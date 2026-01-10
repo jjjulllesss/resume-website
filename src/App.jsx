@@ -9,7 +9,7 @@ function App() {
   const [copied, setCopied] = useState(false)
   const [mediumPosts, setMediumPosts] = useState([])
   const [loadingPosts, setLoadingPosts] = useState(true)
-  const [activityFilter, setActivityFilter] = useState('all') // 'all', 'certification', 'blog-post', 'public-speaking'
+  const [activityFilter, setActivityFilter] = useState('all') // 'all', 'certification', 'blog-post', 'talks'
   const [activityPage, setActivityPage] = useState(0) // For pagination/slider
   const activitiesPerPage = 5
   const [experienceTab, setExperienceTab] = useState('experience') // 'experience' or 'education'
@@ -136,9 +136,6 @@ function App() {
           let normalizedType = String(activity.type).toLowerCase().trim()
           if (normalizedType === 'blog post' || normalizedType === 'blogpost') {
             normalizedType = 'blog-post'
-          }
-          if (normalizedType === 'public speaking' || normalizedType === 'publicspeaking') {
-            normalizedType = 'public-speaking'
           }
           
           activities.push({
@@ -462,11 +459,11 @@ function App() {
                 Blog Posts
               </Button>
               <Button
-                variant={activityFilter === 'public-speaking' ? 'default' : 'outline'}
+                variant={activityFilter === 'talks' ? 'default' : 'outline'}
                 size="sm"
-                onClick={() => setActivityFilter('public-speaking')}
+                onClick={() => setActivityFilter('talks')}
               >
-                Public Speaking
+                Talks
               </Button>
             </div>
 
@@ -484,7 +481,7 @@ function App() {
                           className="text-xs capitalize"
                         >
                           {activity.type === 'blog-post' ? 'Blog Post' : 
-                           activity.type === 'public-speaking' ? 'Public Speaking' : 
+                           activity.type === 'talks' ? 'Talks' : 
                            activity.type}
                         </Badge>
                         <span className="text-xs text-muted-foreground whitespace-nowrap">

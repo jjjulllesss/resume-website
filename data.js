@@ -89,11 +89,11 @@ const resumeData = {
     // Medium Posts
     mediumUsername: "j.mermethusson", 
     
-    // Activities (Publications, Awards, Certifications, Public Speaking, Blog Posts)
+    // Activities (Publications, Awards, Certifications, Talks, Blog Posts)
     // Authorized activity types:
     // - "certification" - Professional certifications and courses
     // - "blog-post" - Blog posts and articles (use lowercase with hyphen)
-    // - "public-speaking" - Public speaking, talks, podcasts (use lowercase with hyphen)
+    // - "talks" - Talks, podcasts
     // - "publication" - Published papers and articles
     // - "award" - Awards and recognitions
     // Date format: "YYYY-MM-DD" or "YYYY-MM" for sorting (newest first)
@@ -104,6 +104,13 @@ const resumeData = {
             details: "MCP concepts, SDK usage in Python, end-to-end applications, and deployment with partners like Anthropic for context-aware AI integrating external tools and data.",
             date: "2025-12-22",
             link: null
+        },
+        {
+            type: "certification",
+            title: "Kaggle / Google - 5-day AI Agents Intensive Course",
+            details: "Intensive Course with Google, gaining hands-on expertise in designing, evaluating, and deploying production-ready AI agents using Gemini APIs, Google's Agent Development Kit (ADK), LangGraph, MCP, and Vertex AI.",
+            date: "2025-12-18",
+            link: "https://www.kaggle.com/certification/badges/julesmermethusson/105"
         },
         {
             type: "certification",
@@ -176,28 +183,28 @@ const resumeData = {
             link: "https://cloud.google.com/customers/ateme"
         },
         {
-            type: "public-speaking",
+            type: "talks",
             title: "Titan Solutions by Ateme",
             details: "Discussion on Ateme Titan Solutions for low-latency streaming, contribution/distribution workflows, VOD transcoding on AWS with Graviton processors, emphasizing scalability, cost-efficiency, and FinOps practices.",
             date: "2025-03-01",
             link: "https://www.youtube.com/watch?v=yTXDBlGLW3s"
         },
         {
-            type: "public-speaking",
+            type: "talks",
             title: "Cloud public ou on-prem pour les chaînes de TV et telcos ?",
             details: "Podcast exploring hybrid cloud/on-premises architectures for TV channels and telcos, covering challenges in event/sports use cases, file transcoding overflow, and disaster recovery plans.",
             date: "2023-09-01",
             link: "https://aws.amazon.com/fr/blogs/france/podcasts/#177"
         },
         {
-            type: "public-speaking",
+            type: "talks",
             title: "Ateme enregistre la télé dans le cloud",
             details: "Podcast on Ateme's Cloud DVR solution using AWS S3 for TV program recording from operator feeds, Kubernetes orchestration, and infrastructure-as-code for scalable video storage and processing.",
             date: "2023-03-31",
             link: "https://aws.amazon.com/fr/blogs/france/podcasts/#155"
         },
         {
-            type: "public-speaking",
+            type: "talks",
             title: "AWS re:invent re:Cap",
             details: "Debrief and Vegas atmosphere from AWS re:Invent with Chrys and Jules discussing highlights like EKS updates, SageMaker Studio...",
             date: "2024-12-03",
