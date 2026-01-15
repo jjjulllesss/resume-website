@@ -100,6 +100,13 @@ const resumeData = {
     activities: [
         {
             type: "certification",
+            title: "DeepLearning.ai - Retrieval Augmented Generation (RAG)",
+            details: "Production-ready RAG systems that enhance LLM accuracy through vector database retrieval, advanced chunking, and robust evaluation frameworks",
+            date: "2026-01-15",
+            link: "https://learn.deeplearning.ai/certificates/2ffab8aa-2af8-4f78-968d-cb25d2cb3be8"
+        },
+        {
+            type: "certification",
             title: "Hugging Face - Model Context Protocol Course",
             details: "MCP concepts, SDK usage in Python, end-to-end applications, and deployment with partners like Anthropic for context-aware AI integrating external tools and data.",
             date: "2025-12-22",
