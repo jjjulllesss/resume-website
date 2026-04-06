@@ -31,12 +31,23 @@ const resumeData = {
     // Each company can have multiple positions
     "career": [
         {
+            "company": "Valtech",
+            "logo": null,
+            "positions": [
+                {
+                    "position": "Senior Cloud & AI Architect",
+                    "period": "2025 - Present",
+                    "description": "Focusing on Google Cloud."
+                }
+            ]
+        },
+        {
             "company": "Ateme",
             "logo": "/ateme.png",
             "positions": [
                 {
                     "position": "Global Cloud Solutions Architect",
-                    "period": "2023 - Present",
+                    "period": "2023 - 2025",
                     "description": "Lead cloud architecture and AI initiatives for strategic customers across AWS, GCP, and Oracle Cloud. Designed reference architectures, strengthened technical partnerships, and built a subtitling workflow using Gemini models on Vertex AI. Drove 30% annual cost savings through FinOps governance and forecasting. Recognized as GCP Partner of the Year 2024."
                   },
                   {
