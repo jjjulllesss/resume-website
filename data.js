@@ -2,7 +2,7 @@
 const resumeData = {
     // Personal Information
     name: "Jules MERMET-HUSSON",
-    role: "Global Cloud Solutions Architect & AI Enthusiast",
+    role: "Senior Cloud & AI Architect",
     profileImage: "/Jules_Mermet-Husson.jpg", // Place your profile image in the public/ directory
     
     // Social Media Links
@@ -31,12 +31,23 @@ const resumeData = {
     // Each company can have multiple positions
     "career": [
         {
+            "company": "Valtech",
+            "logo": "/valtech.png",
+            "positions": [
+                {
+                    "position": "Senior Cloud & AI Architect",
+                    "period": "2026 - Present",
+                    "description": "Provide pre-sales expertise, architectural design, and ongoing support to maximize client value on Google Cloud. Guide internal teams and clients through modern data, Generative AI projects, Greenfield applications, and infrastructure migrations. Act as a technical liaison and Google Cloud evangelist, leading architectural workshops, developing POCs, and expanding the cloud service portfolio."
+                }
+            ]
+        },
+        {
             "company": "Ateme",
             "logo": "/ateme.png",
             "positions": [
                 {
                     "position": "Global Cloud Solutions Architect",
-                    "period": "2023 - Present",
+                    "period": "2023 - 2026",
                     "description": "Lead cloud architecture and AI initiatives for strategic customers across AWS, GCP, and Oracle Cloud. Designed reference architectures, strengthened technical partnerships, and built a subtitling workflow using Gemini models on Vertex AI. Drove 30% annual cost savings through FinOps governance and forecasting. Recognized as GCP Partner of the Year 2024."
                   },
                   {
