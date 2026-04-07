@@ -32,12 +32,12 @@ const resumeData = {
     "career": [
         {
             "company": "Valtech",
-            "logo": null,
+            "logo": "/valtech.png",
             "positions": [
                 {
                     "position": "Senior Cloud & AI Architect",
                     "period": "2025 - Present",
-                    "description": "Focusing on Google Cloud."
+                    "description": "Provide pre-sales expertise, architectural design, and ongoing support to maximize client value on Google Cloud. Guide internal teams and clients through modern data, Generative AI projects, Greenfield applications, and infrastructure migrations. Act as a technical liaison and Google Cloud evangelist, leading architectural workshops, developing POCs, and expanding the cloud service portfolio."
                 }
             ]
         },
