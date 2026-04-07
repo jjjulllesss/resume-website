@@ -36,7 +36,7 @@ const resumeData = {
             "positions": [
                 {
                     "position": "Senior Cloud & AI Architect",
-                    "period": "2025 - Present",
+                    "period": "2026 - Present",
                     "description": "Provide pre-sales expertise, architectural design, and ongoing support to maximize client value on Google Cloud. Guide internal teams and clients through modern data, Generative AI projects, Greenfield applications, and infrastructure migrations. Act as a technical liaison and Google Cloud evangelist, leading architectural workshops, developing POCs, and expanding the cloud service portfolio."
                 }
             ]
@@ -47,7 +47,7 @@ const resumeData = {
             "positions": [
                 {
                     "position": "Global Cloud Solutions Architect",
-                    "period": "2023 - 2025",
+                    "period": "2023 - 2026",
                     "description": "Lead cloud architecture and AI initiatives for strategic customers across AWS, GCP, and Oracle Cloud. Designed reference architectures, strengthened technical partnerships, and built a subtitling workflow using Gemini models on Vertex AI. Drove 30% annual cost savings through FinOps governance and forecasting. Recognized as GCP Partner of the Year 2024."
                   },
                   {
