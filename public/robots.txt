@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps (if any)
-# Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://jules.sh/sitemap.xml
