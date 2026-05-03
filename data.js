@@ -3,6 +3,7 @@ const resumeData = {
     // Personal Information
     name: "Jules MERMET-HUSSON",
     role: "Senior Cloud & AI Architect",
+    alternateRoles: ["Ski & Snowboard Instructor", "AI Systems Builder", "GCP Specialist"],
     location: "Paris (France)",
     profileImage: "/Jules_Mermet-Husson.jpg", // Place your profile image in the public/ directory
     
