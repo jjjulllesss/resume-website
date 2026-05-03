@@ -4,6 +4,14 @@
   "framework": "vite",
   "routes": [
     {
+      "src": "/$",
+      "headers": {
+        "Link": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\", <https://jules.sh/api/index>; rel=\"describedby\"; type=\"text/markdown\", <https://jules.sh/api/index>; rel=\"service-doc\"; type=\"text/markdown\"",
+        "Vary": "Accept"
+      },
+      "continue": true
+    },
+    {
       "src": "/",
       "has": [
         {
@@ -12,10 +20,7 @@
           "value": { "pre": "text/markdown" }
         }
       ],
-      "dest": "/api/index",
-      "headers": {
-        "Vary": "Accept"
-      }
+      "dest": "/api/index"
     },
     {
       "handle": "filesystem"
