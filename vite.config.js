@@ -8,7 +8,8 @@ export default defineConfig({
     react(),
     Sitemap({
       hostname: 'https://jules.sh',
-      dynamicRoutes: []
+      dynamicRoutes: [],
+      generateRobotsTxt: false
     })
   ],
   resolve: {
