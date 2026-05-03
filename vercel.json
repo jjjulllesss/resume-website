@@ -8,7 +8,11 @@
       "headers": [
         {
           "key": "Link",
-          "value": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\""
+          "value": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\", <https://jules.sh/>; rel=\"describedby\"; type=\"text/markdown\", <https://jules.sh/>; rel=\"service-doc\"; type=\"text/markdown\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     }
