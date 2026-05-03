@@ -5,6 +5,59 @@ import { Badge } from './components/ui/badge.jsx'
 import { Download, Copy, Check, ExternalLink, Moon, Sun, ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
 import { resumeData } from '../data.js'
 
+// Typewriter hook for the role/title cycling effect
+const useTypewriter = (strings) => {
+  const [index, setIndex] = useState(0);
+  const [displayText, setDisplayText] = useState(strings[0] || '');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [speed, setSpeed] = useState(55);
+
+  useEffect(() => {
+    if (!strings || strings.length === 0) return;
+
+    const handleTyping = () => {
+      const currentString = strings[index];
+
+      if (!isDeleting) {
+        if (displayText !== currentString) {
+          setDisplayText(currentString.substring(0, displayText.length + 1));
+          setSpeed(55);
+        } else {
+          // Finished typing, pause before deleting
+          setIsDeleting(true);
+          setSpeed(1800);
+        }
+      } else {
+        if (displayText !== '') {
+          setDisplayText(currentString.substring(0, displayText.length - 1));
+          setSpeed(30);
+        } else {
+          // Finished deleting, pause before next string
+          setIsDeleting(false);
+          setIndex((prev) => (prev + 1) % strings.length);
+          setSpeed(400);
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, speed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, index, strings, speed]);
+
+  return displayText;
+};
+
+const TypewriterRole = ({ strings }) => {
+  const displayText = useTypewriter(strings);
+
+  return (
+    <p className="text-muted-foreground mb-2 text-base" style={{ minHeight: '1.5rem' }}>
+      {displayText}
+      <span className="typewriter-cursor">|</span>
+    </p>
+  );
+};
+
 function App() {
   const [copied, setCopied] = useState(false)
   const [mediumPosts, setMediumPosts] = useState([])
@@ -205,6 +258,12 @@ function App() {
   useEffect(() => {
     setActivityPage(0)
   }, [activityFilter])
+
+  // Memoize typewriter strings to prevent unnecessary hook re-runs
+  const typewriterStrings = useMemo(() => [
+    resumeData?.role || '',
+    ...(resumeData?.alternateRoles || [])
+  ], [])
   
   // Safety check for resumeData
   if (!resumeData || !resumeData.name) {
@@ -266,9 +325,7 @@ function App() {
                 <h1 className="text-3xl md:text-4xl font-semibold mb-2 tracking-tight">
                   {resumeData?.name || ''}
                 </h1>
-                <p className="text-muted-foreground mb-2 text-base">
-                  {resumeData?.role || ''}
-                </p>
+                <TypewriterRole strings={typewriterStrings} />
                 <p className="text-muted-foreground mb-4 text-sm flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
                   {resumeData?.location || ''}
