@@ -271,7 +271,7 @@ function App() {
                 </p>
                 <p className="text-muted-foreground mb-4 text-sm flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
-                  Paris (France)
+                  {resumeData?.location || ''}
                 </p>
                 <div className="flex flex-wrap gap-3 items-center">
                   {resumeData.socialLinks && Array.isArray(resumeData.socialLinks) && resumeData.socialLinks.map((link, index) => (
