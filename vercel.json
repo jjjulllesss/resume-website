@@ -1,5 +1,16 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite"
+  "framework": "vite",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\""
+        }
+      ]
+    }
+  ]
 }
