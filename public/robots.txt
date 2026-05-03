@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-# Sitemaps (if any)
 Sitemap: https://jules.sh/sitemap.xml
