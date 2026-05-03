@@ -2,28 +2,31 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Link",
-          "value": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\""
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
+      "src": "/",
       "has": [
         {
           "type": "header",
-          "key": "Accept",
-          "value": ".*text/markdown.*"
+          "key": "accept",
+          "value": { "pre": "text/markdown" }
         }
       ],
-      "destination": "/api/index"
+      "dest": "/api/index",
+      "headers": {
+        "Vary": "Accept"
+      }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Link": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\", <https://jules.sh/api/index>; rel=\"describedby\"; type=\"text/markdown\", <https://jules.sh/api/index>; rel=\"service-doc\"; type=\"text/markdown\"",
+        "Vary": "Accept"
+      },
+      "dest": "/$1"
     }
   ]
 }
