@@ -1,7 +1,7 @@
 export function generateMarkdown(resumeData) {
   let md = `# ${resumeData.name}\n\n`;
   md += `**${resumeData.role}**\n`;
-  md += `Paris (France)\n\n`;
+  md += `${resumeData.location}\n\n`;
 
   md += `## About\n\n${resumeData.bio}\n\n`;
 
