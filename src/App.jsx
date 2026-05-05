@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './com
 import { Badge } from './components/ui/badge.jsx'
 import { Download, Copy, Check, ExternalLink, Moon, Sun, ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
 import { resumeData } from '../data.js'
+import { Analytics } from '@vercel/analytics/react'
 
 // Typewriter hook for the role/title cycling effect
 const useTypewriter = (strings) => {
@@ -622,6 +623,7 @@ function App() {
           </CardContent>
         </Card>
       </div>
+      <Analytics />
     </div>
   )
 }
