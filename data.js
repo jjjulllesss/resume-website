@@ -113,6 +113,13 @@ const resumeData = {
     activities: [
         {
             type: "certification",
+            title: "French Ski and Snowboard Instructor Diploma (Diplôme d'État)",
+            details: "This state-regulated diploma is the highest level of certification for ski and snowboard instruction in France. It validates advanced technical skills and pedagogical expertise required to teach all levels in demanding mountain environments.",
+            date: "2026-04-14",
+            link: null
+        },
+        {
+            type: "certification",
             title: "DeepLearning.ai - Retrieval Augmented Generation (RAG)",
             details: "Production-ready RAG systems that enhance LLM accuracy through vector database retrieval, advanced chunking, and robust evaluation frameworks",
             date: "2026-01-15",
