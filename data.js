@@ -114,7 +114,7 @@ const resumeData = {
         {
             type: "certification",
             title: "French Ski and Snowboard Instructor Diploma (Diplôme d'État)",
-            details: "This state-regulated diploma is the highest level of certification for ski and snowboard instruction in France, recognized internationally through the ISIA. It validates advanced technical skills and pedagogical expertise required to teach all levels in demanding mountain environments.",
+            details: "This state-regulated diploma is the highest level of certification for ski and snowboard instruction in France. It validates advanced technical skills and pedagogical expertise required to teach all levels in demanding mountain environments.",
             date: "2026-04-14",
             link: null
         },
