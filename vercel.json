@@ -2,22 +2,15 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Link",
-          "value": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\", <https://jules.sh/>; rel=\"describedby\"; type=\"text/markdown\", <https://jules.sh/>; rel=\"service-doc\"; type=\"text/markdown\""
-        },
-        {
-          "key": "Vary",
-          "value": "Accept"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
+      "src": "/$",
+      "headers": {
+        "Link": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\", <https://jules.sh/index.html.md>; rel=\"describedby\"; type=\"text/markdown\", <https://jules.sh/llms.txt>; rel=\"help\"; type=\"text/markdown\"",
+        "Vary": "Accept"
+      },
+      "continue": true
+    },
     {
       "source": "/(.*)\\.md",
       "destination": "/api/index"
@@ -27,8 +20,8 @@
       "has": [
         {
           "type": "header",
-          "key": "Accept",
-          "value": ".*text/markdown.*"
+          "key": "accept",
+          "value": { "pre": "text/markdown" }
         }
       ],
       "destination": "/api/index"

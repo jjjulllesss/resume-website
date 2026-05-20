@@ -3,6 +3,8 @@ const resumeData = {
     // Personal Information
     name: "Jules MERMET-HUSSON",
     role: "Senior Cloud & AI Architect",
+    alternateRoles: ["Ski & Snowboard Instructor", "AI Systems Builder", "GCP Specialist"],
+    location: "Paris (France)",
     profileImage: "/Jules_Mermet-Husson.jpg", // Place your profile image in the public/ directory
     
     // Social Media Links
@@ -109,6 +111,13 @@ const resumeData = {
     // - "award" - Awards and recognitions
     // Date format: "YYYY-MM-DD" or "YYYY-MM" for sorting (newest first)
     activities: [
+        {
+            type: "certification",
+            title: "French Ski and Snowboard Instructor Diploma (Diplôme d'État)",
+            details: "This state-regulated diploma is the highest level of certification for ski and snowboard instruction in France. It validates advanced technical skills and pedagogical expertise required to teach all levels in demanding mountain environments.",
+            date: "2026-04-14",
+            link: null
+        },
         {
             type: "certification",
             title: "DeepLearning.ai - Retrieval Augmented Generation (RAG)",

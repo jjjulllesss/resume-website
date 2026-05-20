@@ -1,7 +1,7 @@
 export function generateMarkdown(resumeData) {
   let md = `# ${resumeData.name}\n\n`;
   md += `**${resumeData.role}**\n`;
-  md += `Paris (France)\n\n`;
+  md += `${resumeData.location}\n\n`;
 
   md += `## About\n\n${resumeData.bio}\n\n`;
 
@@ -36,6 +36,21 @@ export function generateMarkdown(resumeData) {
 
   md += `## Links\n\n`;
   resumeData.socialLinks.forEach(link => {
+    md += `- [${link.platform}](${link.url})\n`;
+  });
+
+  return md.trim();
+}
+
+export function generateLLMSTxt(resumeData) {
+  let md = `# ${resumeData.name}\n\n`;
+  md += `> ${resumeData.bio}\n\n`;
+
+  md += `## Resume\n\n`;
+  md += `- [Full Resume](https://jules.sh/index.html.md): Complete professional background, experience, and education in Markdown format.\n\n`;
+
+  md += `## Social Links\n\n`;
+  resumeData.socialLinks.forEach((link) => {
     md += `- [${link.platform}](${link.url})\n`;
   });
 
