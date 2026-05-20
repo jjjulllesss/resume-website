@@ -41,3 +41,18 @@ export function generateMarkdown(resumeData) {
 
   return md.trim();
 }
+
+export function generateLLMSTxt(resumeData) {
+  let md = `# ${resumeData.name}\n\n`;
+  md += `> ${resumeData.bio}\n\n`;
+
+  md += `## Resume\n\n`;
+  md += `- [Full Resume](https://jules.sh/index.html.md): Complete professional background, experience, and education in Markdown format.\n\n`;
+
+  md += `## Social Links\n\n`;
+  resumeData.socialLinks.forEach((link) => {
+    md += `- [${link.platform}](${link.url})\n`;
+  });
+
+  return md.trim();
+}

@@ -10,7 +10,7 @@ export default function handler(req, res) {
 
     res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
     res.setHeader('x-markdown-tokens', tokenCount.toString());
-    res.setHeader('Link', '<https://jules.sh/sitemap.xml>; rel="sitemap", <https://jules.sh/>; rel="canonical", <mailto:j.mermethusson@gmail.com>; rel="author", <https://jules.sh/api/index>; rel="describedby"; type="text/markdown", <https://jules.sh/api/index>; rel="service-doc"; type="text/markdown"');
+    res.setHeader('Link', '<https://jules.sh/sitemap.xml>; rel="sitemap", <https://jules.sh/>; rel="canonical", <mailto:j.mermethusson@gmail.com>; rel="author", <https://jules.sh/index.html.md>; rel="describedby"; type="text/markdown", <https://jules.sh/llms.txt>; rel="help"; type="text/markdown"');
     res.setHeader('Vary', 'Accept');
     return res.status(200).send(markdown);
   }
