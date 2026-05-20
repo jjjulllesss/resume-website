@@ -19,7 +19,22 @@
   ],
   "rewrites": [
     {
+      "source": "/(.*)\\.md",
+      "destination": "/api/index"
+    },
+    {
       "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "Accept",
+          "value": ".*text/markdown.*"
+        }
+      ],
+      "destination": "/api/index"
+    },
+    {
+      "source": "/index.html",
       "has": [
         {
           "type": "header",
