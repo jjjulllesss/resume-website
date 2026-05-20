@@ -12,15 +12,11 @@
       "continue": true
     },
     {
-      "src": "/llms.txt",
-      "dest": "/api/llms-txt"
+      "source": "/(.*)\\.md",
+      "destination": "/api/index"
     },
     {
-      "src": "/index.html.md",
-      "dest": "/api/index"
-    },
-    {
-      "src": "/",
+      "source": "/",
       "has": [
         {
           "type": "header",
@@ -28,18 +24,18 @@
           "value": { "pre": "text/markdown" }
         }
       ],
-      "dest": "/api/index"
+      "destination": "/api/index"
     },
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "headers": {
-        "Link": "<https://jules.sh/sitemap.xml>; rel=\"sitemap\", <https://jules.sh/>; rel=\"canonical\", <mailto:j.mermethusson@gmail.com>; rel=\"author\", <https://jules.sh/index.html.md>; rel=\"describedby\"; type=\"text/markdown\", <https://jules.sh/llms.txt>; rel=\"help\"; type=\"text/markdown\"",
-        "Vary": "Accept"
-      },
-      "dest": "/$1"
+      "source": "/index.html",
+      "has": [
+        {
+          "type": "header",
+          "key": "Accept",
+          "value": ".*text/markdown.*"
+        }
+      ],
+      "destination": "/api/index"
     }
   ]
 }
