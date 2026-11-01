@@ -39,7 +39,7 @@ const resumeData = {
                 {
                     "position": "Senior Cloud & AI Architect",
                     "period": "2026 - Present",
-                    "description": "Provide pre-sales expertise, architectural design, and ongoing support to maximize client value on Google Cloud. Guide internal teams and clients through modern data, Generative AI projects, Greenfield applications, and infrastructure migrations. Act as a technical liaison and Google Cloud evangelist, leading architectural workshops, developing POCs, and expanding the cloud service portfolio."
+                    "description": "Provide pre-sales expertise, architectural design, and ongoing support to maximize client value on Google Cloud. Guide internal teams and clients through modern data, Generative AI projects, Greenfield applications, and infrastructure migrations. Recent engagements include deploying AI in the contact centers of a global industrial group and, for a luxury house, their search engine and the launch of a Shopping agent in the mobile app — a first in the luxury industry. Act as a technical liaison and Google Cloud evangelist, leading architectural workshops, developing POCs, and expanding the cloud service portfolio."
                 }
             ]
         },
@@ -111,6 +111,13 @@ const resumeData = {
     // - "award" - Awards and recognitions
     // Date format: "YYYY-MM-DD" or "YYYY-MM" for sorting (newest first)
     activities: [
+        {
+            type: "talks",
+            title: "Build the DevFest Concierge: Live, with Google CX Agent Studio",
+            details: "Workshop at DevFest Paris on 27 November 2026, 10:35–12:15, Salle 0.3, in French. In 90 minutes, participants build a multi-agent assistant that answers questions from DevFest attendees on CX Agent Studio: specialized agents connected to tools and external data, instructions generated in seconds, quality evaluation, and live monitoring. They leave with an agent deployed on their GCP project.",
+            date: "2026-11-27",
+            link: "https://devfest.gdgparis.fr/"
+        },
         {
             type: "certification",
             title: "French Ski and Snowboard Instructor Diploma (Diplôme d'État)",
