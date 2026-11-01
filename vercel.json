@@ -12,8 +12,12 @@
       "continue": true
     },
     {
-      "source": "/(.*)\\.md",
-      "destination": "/api/index"
+      "src": "/llms\\.txt",
+      "dest": "/api/llms-txt"
+    },
+    {
+      "src": "/index\\.html\\.md",
+      "dest": "/api/index"
     },
     {
       "source": "/",
